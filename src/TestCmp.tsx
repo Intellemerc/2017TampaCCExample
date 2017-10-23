@@ -6,7 +6,7 @@ interface Users {
   username: string;
 }
 interface State {
-  users: Users[] | null;
+  users: Users[];
 }
 interface Props {}
 export default class extends React.Component<Props, State> {
@@ -35,10 +35,6 @@ export default class extends React.Component<Props, State> {
   }
   render() {
     const { users } = this.state;
-    return !users ? (
-      <div>Loading...</div>
-    ) : (
-      <ul>{users.map(u => <li key={u.id}>{u.name}</li>)}</ul>
-    );
+    return <ul>{users.map(u => <li key={u.id}>{u.name}</li>)}</ul>;
   }
 }
