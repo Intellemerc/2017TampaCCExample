@@ -26,7 +26,7 @@ export default class extends React.Component<Props, State> {
     super();
 
     this.state = {
-      users: []
+      users: null
     };
   }
   componentDidMount() {
@@ -38,6 +38,10 @@ export default class extends React.Component<Props, State> {
         this.setState({
           users: data
         });
+      })
+      .catch(reason => {
+        // tslint:disable-next-line:no-console
+        console.log(reason);
       });
   }
   render() {
