@@ -1,44 +1,51 @@
 import * as React from "react";
+import "./TestCmp.css";
 
-interface Users {
+const dataUrl = "https://jsonplaceholder.typicode.com/users";
+
+interface User {
   id: number;
   name: string;
   username: string;
 }
 interface State {
-  users: Users[] | null;
+  users: User[] | null;
 }
 interface Props {}
+
+const UserInfo = (user: User) => (
+  <li className="user">
+    <div>id: {user.id}</div>
+    <div>name: {user.name}</div>
+    <div>user name: {user.username} </div>
+  </li>
+);
+
 export default class extends React.Component<Props, State> {
   constructor() {
     super();
 
     this.state = {
-      users: [
-        {
-          id: 1,
-          name: "James Armstrong",
-          username: "JArmstrong"
-        },
-        {
-          id: 2,
-          name: "John Doe",
-          username: "JDoe"
-        },
-        {
-          id: 3,
-          name: "John Smith",
-          username: "JSmith"
-        }
-      ]
+      users: []
     };
+  }
+  componentDidMount() {
+    fetch(dataUrl)
+      .then(data => {
+        return data.json();
+      })
+      .then(data => {
+        this.setState({
+          users: data
+        });
+      });
   }
   render() {
     const { users } = this.state;
     return !users ? (
       <div>Loading...</div>
     ) : (
-      <ul>{users.map(u => <li key={u.id}>{u.name}</li>)}</ul>
+      <ul>{users.map(u => <UserInfo key={u.id} {...u} />)}</ul>
     );
   }
 }
