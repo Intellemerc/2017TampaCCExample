@@ -1,12 +1,12 @@
 import * as React from "react";
+import "./Parent.css";
 
-export default class Parent extends React.Component {
-  render() {
-    return (
-      <div>
-        Parent
-        {this.props.children}
-      </div>
-    );
-  }
+interface Props {
+  children: React.ReactNode;
 }
+export default (props: Props) => (
+  <div className="Parent">
+    Parent
+    {props.children}
+  </div>
+);
