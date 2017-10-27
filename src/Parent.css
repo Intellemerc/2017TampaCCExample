@@ -1,3 +1,27 @@
 .Parent {
-  border: 1px solid black;
+  margin: 15px;
+}
+.Children div {
+  margin: 15px auto;
+}
+
+.DefaultParent {
+  width: 250px;
+  border: 15px solid rgb(0, 117, 0);
+  margin: 0 auto;
+}
+.DefaultChildren div {
+  border: 10px solid rgb(1, 1, 236);
+  width: 150px;
+}
+
+.Parent2 {
+  border: 1px solid rgb(121, 0, 121);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  width: 80%;
+  margin: 0 auto;
+}
+.Children2 div {
+  border: 1px solid rgb(72, 185, 219);
+  width: 90%;
 }
