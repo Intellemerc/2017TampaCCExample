@@ -1,7 +1,7 @@
 .Parent {
   margin: 15px;
 }
-.Children div {
+.Children > div {
   margin: 15px auto;
 }
 
@@ -12,7 +12,7 @@
   color: rgb(0, 117, 0);
   font-size: 30px;
 }
-.DefaultChildren div {
+.DefaultChildren > div {
   border: 10px solid rgb(1, 1, 236);
   width: 150px;
 }
@@ -24,7 +24,7 @@
   margin: 0 auto;
   color: rgb(121, 0, 121);
 }
-.Children2 div {
+.Children2 > div {
   border: 1px solid rgb(72, 185, 219);
   width: 90%;
 }

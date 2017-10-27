@@ -9,16 +9,16 @@ class App extends React.Component {
     return (
       <div className="App">
         <Parent>
-          <Child />
-          <Child />
+          <Child FName="James" />
+          <Child FName="Gene" />
         </Parent>
         <br />
         <Parent2>
-          <Child />
-          <Child />
-          <Child />
-          <Child />
-          <Child />
+          <Child FName="Michael" LName="Smith" />
+          <Child FName="Tiffany" LName="Doe" />
+          <Child FName="Jane" LName="Ross" />
+          <Child FName="Ellie" LName="Macy" />
+          <Child FName="Benji" LName="Arthur" />
         </Parent2>
       </div>
     );
