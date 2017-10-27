@@ -9,6 +9,8 @@
   width: 250px;
   border: 15px solid rgb(0, 117, 0);
   margin: 0 auto;
+  color: rgb(0, 117, 0);
+  font-size: 30px;
 }
 .DefaultChildren div {
   border: 10px solid rgb(1, 1, 236);
@@ -20,6 +22,7 @@
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   width: 80%;
   margin: 0 auto;
+  color: rgb(121, 0, 121);
 }
 .Children2 div {
   border: 1px solid rgb(72, 185, 219);
