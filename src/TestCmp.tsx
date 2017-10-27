@@ -1,27 +1,16 @@
 import * as React from "react";
 import "./TestCmp.css";
+import User from "./User";
+import UserInfo from "./UserInfo";
 
 const dataUrl = "https://jsonplaceholder.typicode.com/users";
 
-interface User {
-  id: number;
-  name: string;
-  username: string;
-}
 interface State {
   users: User[] | null;
 }
 interface Props {
   limit: number;
 }
-
-const UserInfo = (user: User) => (
-  <li className="user">
-    <div>id: {user.id}</div>
-    <div>name: {user.name}</div>
-    <div>user name: {user.username} </div>
-  </li>
-);
 
 export default class extends React.Component<Props, State> {
   constructor() {
